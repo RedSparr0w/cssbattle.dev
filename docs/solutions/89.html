@@ -1,0 +1,39 @@
+<div class="circle"></div>
+<div class="triangle">
+  <div class="inner-circle"></div>
+</div>
+<style>
+  body {
+    background: #191919
+  }
+  .circle {
+    background: #F9E492;
+    width: 200;
+    height: 200;
+    border-radius: 100%;
+    left: 100;
+    top: 50;
+    position: absolute
+  }
+  
+  .triangle {
+    background: #4F77FF;
+    width: 280;
+    height: 140;
+    position: absolute;
+    top: 160;
+    left: 60;
+    overflow: hidden;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%)
+  }
+
+  .inner-circle {
+    background: #191919;
+    width: 200;
+    height: 200;
+    border-radius: 100%;
+    left: 40;
+    top: -110;
+    position: absolute
+  }
+</style>
