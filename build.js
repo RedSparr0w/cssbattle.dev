@@ -16,17 +16,15 @@ output = output.sort(([a], [b]) => a.match(/(\d+)/)[1] - b.match(/(\d+)/)[1]).ma
   return `
   <div class="col">
     <div class="card shadow-sm">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#solutionModal" data-id="${id}">
-        <img class="show-hover bd-placeholder-img card-img-top" width="100%" src="https://cssbattle.dev/targets/${id}.png"/>
-      </a>
-      <div class="card-body">
-        <pre>
-        <code>
-${text.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
-        </code>
-        </pre>
-        <p class="muted my-0">Solution #${id}</p>
+      <div class="card-header">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#solutionModal" data-id="${id}">
+          <img class="show-hover bd-placeholder-img card-img-top" width="100%" src="https://cssbattle.dev/targets/${id}.png"/>
+        </a>
       </div>
+      <div class="card-body">
+        <pre><code>${text.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>
+      </div>
+      <div class="card-footer">Solution #${id}</div>
     </div>
   </div>`;
 })
